@@ -1,0 +1,8 @@
+Error Log
+Log genenerated on 11/10/2011 - 00:39:36
+
+--begin log--
+2011/10/11 00:39:36: Utils::stringToInt::FORMAT 'hello' cannot be converted to an integer
+2011/10/11 00:39:36: Utils::stringToInt::FORMAT 'ooooh' cannot be converted to an integer
+2011/10/11 00:39:36: Utils::stringToInt::FORMAT 'another' cannot be converted to an integer
+--end log--
