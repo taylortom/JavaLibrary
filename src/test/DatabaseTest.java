@@ -13,7 +13,7 @@ import database.DatabaseConnection;
  * 
  * @author Tom
  * @version 0.1
- * @history 10.10.2011: Created class
+ * @history Oct 10, 2011: Created class
  */
 public class DatabaseTest
 {
@@ -27,6 +27,8 @@ public class DatabaseTest
 	 */
 	private static void JDBCODBCTests()
 	{
+		System.out.println("DatabaseTest.JDBCODBCTests");
+		
 		DatabaseConnection dc = new DatabaseConnection("worldEnergy", "jdbc:odbc:WorldEnergy", "sun.jdbc.odbc.JdbcOdbcDriver", "", "");
 
 		String writeQuery = "INSERT INTO Test(Name, Var3, Var4) VALUES(?, ?, ?)";

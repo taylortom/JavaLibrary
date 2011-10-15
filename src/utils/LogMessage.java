@@ -5,7 +5,7 @@ package utils;
  *
  * @author Tom
  * @version 0.1
- * @history 30.08.2011: Created class
+ * @history Aug 30, 2011: Created class
  */
 public class LogMessage 
 {
@@ -18,7 +18,7 @@ public class LogMessage
 	private String date;
 
 	/**
-	 * Constructor method
+	 * Constructor
 	 * @param msg
 	 * @param lvl 
 	 */
@@ -57,7 +57,7 @@ public class LogMessage
 	}
 
 	/**
-	 * Just prints out the error message
+	 * Prints out the error message
 	 */
 	public void printMessage()
 	{

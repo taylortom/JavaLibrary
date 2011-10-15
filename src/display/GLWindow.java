@@ -16,7 +16,7 @@ import utils.ErrorLog;
  * 
  * @author Tom
  * @version 0.1
- * @history 10.11.2011: Created class
+ * @history 11 Oct, 2011: Created class
  */
 
 public class GLWindow implements GLEventListener
@@ -33,8 +33,15 @@ public class GLWindow implements GLEventListener
 	private static int width = 0;
 	private static int height = 0;
 	
+	// the window framerate
 	private static int framerate = 60;
-	
+
+	/**
+	 * Constructor
+	 * @param windowTitle
+	 * @param windowWidth
+	 * @param windowHeight
+	 */
 	public GLWindow(String windowTitle, int windowWidth, int windowHeight) 
 	{
 		System.out.println("Window.Window");
@@ -49,7 +56,7 @@ public class GLWindow implements GLEventListener
 		frame.add(canvas);
 		frame.setSize(width, height);
 		
-		showWindow(true);
+		frame.setVisible(true);
 		
 		//call the display() method 60 time per second
 		FPSAnimator animator = new FPSAnimator(canvas, framerate);
@@ -105,9 +112,11 @@ public class GLWindow implements GLEventListener
 		gl.glHint(GL2.GL_PERSPECTIVE_CORRECTION_HINT, GL.GL_NICEST);
 	}
 
-	@Override
-	public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3, int arg4) {	}
-	
+	/**
+	 * Resizes the window
+	 * @param newWidth
+	 * @param newHeight
+	 */
 	public void resizeWindow(int newWidth, int newHeight)
 	{
 		width = newWidth;
@@ -115,9 +124,7 @@ public class GLWindow implements GLEventListener
 		frame.setSize(width, height);
 	}
 	
-	private void showWindow(Boolean visible)
-	{
-		frame.setVisible(visible);
-	}
+	@Override
+	public void reshape(GLAutoDrawable arg0, int arg1, int arg2, int arg3, int arg4) {	}
 }
 

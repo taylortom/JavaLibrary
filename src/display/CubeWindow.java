@@ -1,8 +1,17 @@
 package display;
 
+//Java imports
 import javax.media.opengl.GL;
 import javax.media.opengl.GL2;
 import javax.media.opengl.GLAutoDrawable;
+
+/**
+ * A temporary class to test OpenGL 
+ *
+ * @author Tom
+ * @version 0.1
+ * @history Oct 12, 2011: Created class
+ */
 
 public class CubeWindow extends GLWindow
 {
@@ -27,43 +36,43 @@ public class CubeWindow extends GLWindow
 		gl.glRotatef(rotation, 1.0f, 1.0f, 1.0f);
 		
 		gl.glBegin(GL2.GL_QUADS);
-			gl.glColor3f(0.0f,1.0f,0.0f);	// Color Blue
-			// front
-				gl.glVertex3f(0.0f, 0.0f, 0.0f); 
-				gl.glVertex3f(0.0f, 1.0f, 0.0f); 
-				gl.glVertex3f(1.0f, 1.0f, 0.0f);
-				gl.glVertex3f(1.0f, 0.0f, 0.0f);
-			gl.glColor3f(1.0f,0.5f,0.0f);	// Color Orange
-			// back
-				gl.glVertex3f(1.0f, 0.0f, 1.0f);
-				gl.glVertex3f(1.0f, 1.0f, 1.0f); 
-				gl.glVertex3f(0.0f, 1.0f, 1.0f);
-				gl.glVertex3f(0.0f, 0.0f, 1.0f);
-			gl.glColor3f(1.0f,0.0f,0.0f);	// Color Red	
-			// top
-				gl.glVertex3f(0.0f, 1.0f, 0.0f);
-				gl.glVertex3f(0.0f, 1.0f, 1.0f);	
-				gl.glVertex3f(1.0f, 1.0f, 1.0f);
-				gl.glVertex3f(1.0f, 1.0f, 0.0f);
-			gl.glColor3f(1.0f,1.0f,0.0f);	// Color Yellow
-			// bottom
-				gl.glVertex3f(0.0f, 0.0f, 1.0f);
-				gl.glVertex3f(0.0f, 0.0f, 0.0f); 
-				gl.glVertex3f(1.0f, 0.0f, 0.0f);
-				gl.glVertex3f(1.0f, 0.0f, 1.0f);
-			gl.glColor3f(0.0f,0.0f,1.0f);	// Color Blue
-			// left
-				gl.glVertex3f(0.0f, 0.0f, 1.0f);
-				gl.glVertex3f(0.0f, 1.0f, 1.0f); 
-				gl.glVertex3f(0.0f, 1.0f, 0.0f);
-				gl.glVertex3f(0.0f, 0.0f, 0.0f);
-			gl.glColor3f(1.0f,0.0f,1.0f);	// Color Violet
-			// right
-				gl.glVertex3f(1.0f, 0.0f, 0.0f);
-				gl.glVertex3f(1.0f, 1.0f, 0.0f); 
-				gl.glVertex3f(1.0f, 1.0f, 1.0f);
-				gl.glVertex3f(1.0f, 0.0f, 1.0f);
-	   gl.glEnd();	
+		gl.glColor3f(0.0f,1.0f,0.0f);	// Color Blue
+		// front
+		gl.glVertex3f(0.0f, 0.0f, 0.0f); 
+		gl.glVertex3f(0.0f, 1.0f, 0.0f); 
+		gl.glVertex3f(1.0f, 1.0f, 0.0f);
+		gl.glVertex3f(1.0f, 0.0f, 0.0f);
+		gl.glColor3f(1.0f,0.5f,0.0f);	// Color Orange
+		// back
+		gl.glVertex3f(1.0f, 0.0f, 1.0f);
+		gl.glVertex3f(1.0f, 1.0f, 1.0f); 
+		gl.glVertex3f(0.0f, 1.0f, 1.0f);
+		gl.glVertex3f(0.0f, 0.0f, 1.0f);
+		gl.glColor3f(1.0f,0.0f,0.0f);	// Color Red	
+		// top
+		gl.glVertex3f(0.0f, 1.0f, 0.0f);
+		gl.glVertex3f(0.0f, 1.0f, 1.0f);	
+		gl.glVertex3f(1.0f, 1.0f, 1.0f);
+		gl.glVertex3f(1.0f, 1.0f, 0.0f);
+		gl.glColor3f(1.0f,1.0f,0.0f);	// Color Yellow
+		// bottom
+		gl.glVertex3f(0.0f, 0.0f, 1.0f);
+		gl.glVertex3f(0.0f, 0.0f, 0.0f); 
+		gl.glVertex3f(1.0f, 0.0f, 0.0f);
+		gl.glVertex3f(1.0f, 0.0f, 1.0f);
+		gl.glColor3f(0.0f,0.0f,1.0f);	// Color Blue
+		// left
+		gl.glVertex3f(0.0f, 0.0f, 1.0f);
+		gl.glVertex3f(0.0f, 1.0f, 1.0f); 
+		gl.glVertex3f(0.0f, 1.0f, 0.0f);
+		gl.glVertex3f(0.0f, 0.0f, 0.0f);
+		gl.glColor3f(1.0f,0.0f,1.0f);	// Color Violet
+		// right
+		gl.glVertex3f(1.0f, 0.0f, 0.0f);
+		gl.glVertex3f(1.0f, 1.0f, 0.0f); 
+		gl.glVertex3f(1.0f, 1.0f, 1.0f);
+		gl.glVertex3f(1.0f, 0.0f, 1.0f);
+		gl.glEnd();	
 		  
 		rotation += 1.0;
 	}

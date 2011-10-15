@@ -1,30 +1,24 @@
 package test;
 
+// Java Library imports
+import display.CubeWindow;
+
 /**
  * A class used to test the display package code
  * 
  * @author Tom
  * @version 0.1
- * @history 11.10.2011: Created class
+ * @history Oct 11, 2011: Created class
  */
 public class DisplayTest
 {
-
-	/**
-	 * 
-	 */
-	public DisplayTest()
-	{
-		// TODO Auto-generated constructor stub
-	}
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
-
+		System.out.println("DisplayTest.main");
+		
+		Thread t1 = new Thread();
+		t1.start();
+		
+		CubeWindow window = new CubeWindow("Test", 800, 600);
 	}
-
 }

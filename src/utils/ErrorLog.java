@@ -11,12 +11,14 @@ import java.util.ArrayList;
  * 
  * @author Tom
  * @version 0.1
- * @history 30.08.2011: Created class
+ * @history Aug 30, 2011: Created class
  */
 public class ErrorLog 
 {
+	// the path/filename of the error log, uses the current date
 	private static final String LOG_NAME = "logs/error_log_" + Utils.getTimeStamp("yy_MM_dd") + ".xml";
 
+	// the ErrorLog instance
 	private static ErrorLog instance = null;
 
 	// the possible error states
@@ -64,7 +66,7 @@ public class ErrorLog
 	 */
 	public void printLog() 
 	{ 
-		System.out.println("\nError log\nLog genenerated on " + Utils.getTimeStamp("dd/MM/yyyy"));
+		System.out.println("\nError log\nLog genenerated on " + Utils.getTimeStamp("dd/MM/yyyy at + HH:mm:ss"));
 
 		if (this.logMessages.size() > 0)
 		{
@@ -113,14 +115,14 @@ public class ErrorLog
 		}
 		catch(IOException e)
 		{
-			// well this is embarrassing; encountered error when exporting the error log
+			// well this is embarrassing; encountered error when exporting the error log >.<
 			ErrorLog el = ErrorLog.getInstance();
 			el.addMessage("ErrorLog", "exportLog", "Encountered an error when trying to export error log", ErrorLog.Error.IO);
 		}
 	}
 
 	/**
-	 * The constructor method, should never be called directly
+	 * Constructor - should never be called directly
 	 */
 	protected ErrorLog() { }
 }

@@ -16,7 +16,7 @@ import utils.ErrorLog;
  *
  * @author Tom
  * @version 0.1
- * @history 07.09.2011: Created class
+ * @history Sept 07, 2011: Created class
  */
 public class DatabaseConnection
 {
@@ -29,10 +29,16 @@ public class DatabaseConnection
 	// the username and password
 	private String username;
 	private String password;
+	
 	private Connection connection;
 
 	/**
-	 * Constructor method
+	 * Constructor
+	 * @param name
+	 * @param database
+	 * @param driver
+	 * @param username
+	 * @param password
 	 */
 	public DatabaseConnection(String name, String database, String driver, String username, String password)
 	{
@@ -66,6 +72,11 @@ public class DatabaseConnection
 		}
 	}
 
+	/**
+	 * Writes data to the database
+	 * @param query
+	 * @param valuesToWrite
+	 */
 	public void writeData(String query, String[] valuesToWrite)
 	{
 		try
@@ -111,6 +122,9 @@ public class DatabaseConnection
 		}
 	}
 
+	/**
+	 * Closes the database connection
+	 */
 	public void close()
 	{
 		try

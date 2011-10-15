@@ -1,17 +1,11 @@
 package test;
 
 // Java imports
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 // Java Library imports
-import database.DatabaseConnection;
-import display.CubeWindow;
-import display.GLWindow;
 import utils.ErrorLog;
 import utils.Utils;
 
@@ -20,7 +14,7 @@ import utils.Utils;
  * 
  * @author Tom
  * @version 0.2
- * @history 30.08.2011: Created class
+ * @history Aug 30, 2011: Created class
  */
 public class UtilsTest 
 {    
@@ -47,7 +41,7 @@ public class UtilsTest
 	}
 
 	/**
-	 * Some basic code to test the functionality of my database code
+	 * Some basic code to test the functionality the Utils methods
 	 */
 	private static void UtilsTests()
 	{

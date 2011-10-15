@@ -13,10 +13,18 @@ import java.text.SimpleDateFormat;
  * 
  * @author Tom
  * @version 0.1
- * @history 29.08.2011: Created class
+ * @history Aug 29, 2011: Created class
  */
 public class Utils 
 {   
+	/**
+	 * Checks if the supplied object is empty according its type
+	 * Currently supports: 
+	 * - String
+	 * - ArrayList
+	 * @param objToCheck
+	 * @return
+	 */
 	public static Boolean isEmpty(Object objToCheck)
 	{
 		if (objToCheck instanceof String) 
@@ -65,7 +73,7 @@ public class Utils
 	 * @param string to search
 	 * @param string to search for
 	 * @param string to replace searchString
-	 * @return
+	 * @return the amended string
 	 */
 	public static String stringSearchAndReplace(String stringToSearch, String searchString, String replacementString)
 	{
@@ -86,7 +94,6 @@ public class Utils
 	 * @param delimiter the value used to split the string
 	 * @return ArrayList of string objects
 	 */
-
 	public static ArrayList stringSplit(String stringToSplit, String delimiter) 
 	{
 		if (delimiter == null) delimiter = " ";
@@ -189,25 +196,23 @@ public class Utils
 	 * Gets the current date/time and formats according to the passed param
 	 * Accepted values as per the SimpleDateFormat:
 	 * 
-	 * G	Era designator		Text			AD
-	 * y	Year			Year			1996; 96
-	 * M	Month in year		Month			July; Jul; 07
-	 * w	Week in year		Number			27
-	 * W	Week in month		Number			2
-	 * D	Day in year		Number			189
-	 * d	Day in month		Number			10
+	 * G	Era designator			Text				AD
+	 * y	Year						Year				1996; 96
+	 * M	Month in year			Month				July; Jul; 07
+	 * w	Week in year			Number			27
+	 * W	Week in month			Number			2
+	 * D	Day in year				Number			189
+	 * d	Day in month			Number			10
 	 * F	Day of week in month	Number			2
-	 * E	Day in week		Text			Tuesday; Tue
-	 * a	Am/pm marker		Text			PM
+	 * E	Day in week				Text				Tuesday; Tue
+	 * a	Am/pm marker			Text				PM
 	 * H	Hour in day (0-23)	Number			0
 	 * k	Hour in day (1-24)	Number			24
 	 * K	Hour in am/pm (0-11)	Number			0
 	 * h	Hour in am/pm (1-12)	Number			12
-	 * m	Minute in hour		Number			30
-	 * s	Second in minute	Number			55
-	 * S	Millisecond		Number			978
-	 * z	Time zone		General time zone	Pacific Standard Time; PST; GMT-08:00
-	 * Z	Time zone		RFC 822 time zone	-0800
+	 * m	Minute in hour			Number			30
+	 * s	Second in minute		Number			55
+	 * S	Millisecond				Number			978
 	 * 
 	 * @param the date/time format 
 	 * @return the date in the correct format (e.g. "yyyy/MM/dd HH:mm:ss")
