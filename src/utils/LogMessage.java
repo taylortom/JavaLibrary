@@ -28,7 +28,7 @@ public class LogMessage
 		this.methodName = method;
 		this.message = msg;
 		this.errorLevel = lvl;
-		this.date = Utils.getTimeStamp("");
+		this.date = Utils.generateTimeStamp("");
 	}
 
 	/**

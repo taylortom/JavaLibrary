@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class ErrorLog 
 {
 	// the path/filename of the error log, uses the current date
-	private static final String LOG_NAME = "logs/error_log_" + Utils.getTimeStamp("yy_MM_dd") + ".xml";
+	private static final String LOG_NAME = "logs/error_log_" + Utils.generateTimeStamp("yy_MM_dd") + ".xml";
 
 	// the ErrorLog instance
 	private static ErrorLog instance = null;
@@ -66,7 +66,7 @@ public class ErrorLog
 	 */
 	public void printLog() 
 	{ 
-		System.out.println("\nError log\nLog genenerated on " + Utils.getTimeStamp("dd/MM/yyyy at + HH:mm:ss"));
+		System.out.println("\nError log\nLog genenerated on " + Utils.generateTimeStamp("dd/MM/yyyy at + HH:mm:ss"));
 
 		if (this.logMessages.size() > 0)
 		{
@@ -93,7 +93,7 @@ public class ErrorLog
 			// add file header
 			fw.append("Error Log");
 			fw.append('\n');
-			fw.append("Log genenerated on " + Utils.getTimeStamp("dd/MM/yyyy - HH:mm:ss"));
+			fw.append("Log genenerated on " + Utils.generateTimeStamp("dd/MM/yyyy - HH:mm:ss"));
 			fw.append('\n');
 			fw.append('\n');
 			fw.append("--begin log--");

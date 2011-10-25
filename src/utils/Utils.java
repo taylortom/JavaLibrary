@@ -1,3 +1,5 @@
+// TODO add arraySearchAndRemove
+
 package utils;
 
 // Java imports
@@ -5,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Date;
+import java.util.Random;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -47,11 +50,11 @@ public class Utils
 	 * @param searchObject
 	 * @return Boolean depending on whether the list contains searchObject
 	 */
-	public static Boolean arraySearch(ArrayList arrayToSearch, Object searchObject)
+	public static Object arraySearch(ArrayList arrayToSearch, Object searchObject)
 	{	
 		for (int i = 0; i < arrayToSearch.size(); i++) 
 		{
-			if (arrayToSearch.get(i).equals(searchObject)) return true;
+			if (arrayToSearch.get(i).equals(searchObject)) return arrayToSearch.get(i);
 		}
 
 		return false;
@@ -217,12 +220,43 @@ public class Utils
 	 * @param the date/time format 
 	 * @return the date in the correct format (e.g. "yyyy/MM/dd HH:mm:ss")
 	 */
-	public static String getTimeStamp(String format)
+	public static String generateTimeStamp(String format)
 	{
 		if (Utils.isEmpty(format)) format = "yyyy/MM/dd HH:mm:ss";
 
 		DateFormat dateFormat = new SimpleDateFormat(format);
 		Date date = new Date();
 		return dateFormat.format(date);
+	}
+	
+	/**
+	 * Returns a unique id based on the current time
+	 * @param stringToConvert
+	 * @return equivalent integer value
+	 */
+	public static String generateUniqueId(String prefixString) 
+	{
+		return prefixString += generateTimeStamp("yyMMddHHmmss");
+	}
+	
+	/**
+	 * Generates a random integer between 0 and topBoundary
+	 * @return random number
+	 */
+	public static int generateRandomNumber(int topBoundary)
+	{
+		System.out.println("Utils.generateRandomNumber: " + topBoundary);
+		Random r = new Random();
+		return r.nextInt(topBoundary);
+	}
+	
+	/**
+	 * Generates a random integer (full range)
+	 * @return random number
+	 */
+	public static int generateRandomNumber()
+	{
+		Random r = new Random();
+		return r.nextInt();
 	}
 }

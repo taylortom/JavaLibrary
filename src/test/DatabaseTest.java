@@ -50,7 +50,7 @@ public class DatabaseTest
 		catch (SQLException e) 
 		{ 
 			ErrorLog el = ErrorLog.getInstance();
-			el.addMessage("JavaApplication", "main", e.getMessage(), ErrorLog.Error.SQL); 
+			el.addMessage("DatabaseTest", "main", e.getMessage(), ErrorLog.Error.SQL); 
 		}
 
 		// close the connection when we've finished
